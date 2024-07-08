@@ -21,12 +21,13 @@ const Todo = () => {
   const handleEditTask = (id) => {
     setEditTask(id);
     setTask([inputVal], id);
-    setBtnName("Edit")
+    setBtnName("Edit");
   };
   const handleDeleteTask = (id) => {
     const deleteTask = [...inputVal];
     deleteTask.splice(id, 1);
     setInputVal(deleteTask);
+    // setInputVal(deleteTask.filter((dlt) => dlt !== id));
   };
   return (
     <div>
@@ -37,7 +38,7 @@ const Todo = () => {
           <ul key={id}>
             <li>
               {ele}
-              <button onClick={() => handleDeleteTask(id)}>Delete</button>
+              <button onClick={() => handleDeleteTask(ele)}>Delete</button>
               <button onClick={() => handleEditTask(id)}>Edit</button>
             </li>
           </ul>
