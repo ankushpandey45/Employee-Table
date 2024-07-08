@@ -104,6 +104,32 @@
         .catch((rej) => {
           console.error(rej);
         });
+
+      const obj1 = {
+        "ank ush": "ankush",
+      };
+      console.log(obj1["ank ush"]);
+
+      function Obj2(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      const obj = new Obj2("ankush", 23);
+      console.log(obj);
+
+      const objj = {
+        name: "Amit",
+        age: 24,
+        salary: 20000,
+      };
+      console.log(objj);
+      function obj4(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+      }
+      const constructor = new obj4("Niraj", 25, 35000);
+      console.log(constructor);
     </script>
   </body>
 </html>
